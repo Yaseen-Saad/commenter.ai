@@ -29,25 +29,25 @@ signup.onclick = (e) => {
       "Don't Have An Account Yet ? ";
   }
 };
-// document.forms[0].onsubmit = function (e) {
-//   e.preventDefault();
+document.forms[0].onsubmit = function (e) {
+  e.preventDefault();
 
-//   let email = document.querySelector("form:first-of-type input[type=text]");
-//   let password = document.querySelector(
-//     "form:first-of-type input[type=password]"
-//   );
-//   let emailRegex =
-//     /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
-//   if (emailRegex.test(email.value)) {
-//     if (password.value) {
-//       window.open("../../home.html");
-//     } else {
-//       giveAlert("Please Enter Your Password");
-//     }
-//   } else {
-//     giveAlert("Please Enter A Valid Email");
-//   }
-// };
+  let email = document.querySelector("form:first-of-type input[type=text]");
+  let password = document.querySelector(
+    "form:first-of-type input[type=password]"
+  );
+  let emailRegex =
+    /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+  if (emailRegex.test(email.value)) {
+    if (password.value) {
+      this.submit();
+    } else {
+      giveAlert("Please Enter Your Password");
+    }
+  } else {
+    giveAlert("Please Enter A Valid Email");
+  }
+};
 let SignUp = document.querySelector("form:nth-of-type(2)");
 let signUp2 = document.querySelector("form:last-of-type");
 SignUp.onsubmit = (e) => {
