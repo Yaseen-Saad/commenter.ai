@@ -1,0 +1,160 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;0,700;1,500;1,900&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-transform: capitalize;
+  font-family: "Poppins", sans-serif;
+}
+
+:focus {
+  outline: none;
+}
+
+body {
+  position: relative;
+  margin: 0;
+}
+body main {
+  display: flex;
+}
+body main > section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-inline: 20px;
+  width: 50%;
+  height: 100vh;
+}
+body main > section:first-child {
+  background-color: #0050b2;
+  color: #fff;
+  letter-spacing: 1.5px;
+}
+body main > section:first-child h2 {
+  text-align: center;
+  font-size: 1rem;
+}
+body main > section:first-child p {
+  font-size: 0.6rem;
+}
+body main > section:first-child p:first-of-type {
+  text-align: center;
+}
+body main > section:last-child {
+  gap: 20px;
+}
+body main > section:last-child h2 {
+  text-align: center;
+}
+body main > section:last-child > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+body main > section:last-child > div:has(> span) {
+  display: none;
+  width: 80%;
+  justify-content: space-evenly;
+}
+body main > section:last-child > div:has(> span).active {
+  display: flex;
+}
+body main > section:last-child > div:has(> span) > span {
+  width: 40%;
+  height: 5px;
+  background-color: rgba(0, 0, 0, 0.1882352941);
+  border-radius: 30px;
+}
+body main > section:last-child > div:has(> span) > span.active {
+  background-color: #0050b2;
+}
+body main > section:last-child > div:first-of-type p span {
+  text-transform: none;
+  color: #0050b2;
+}
+body main > section:last-child form {
+  display: none;
+  gap: 10px;
+  flex-direction: column;
+}
+body main > section:last-child form.active {
+  display: flex;
+}
+body main > section:last-child form div {
+  position: relative;
+}
+body main > section:last-child form div:has(> div > label) {
+  display: flex;
+  gap: 10px;
+}
+body main > section:last-child form div:has(> div > label) div {
+  width: -moz-available;
+  width: fill-available;
+  width: -webkit-fill-available;
+}
+body main > section:last-child form div label {
+  position: absolute;
+  font-size: 0.7rem;
+  background-color: #fff;
+  left: 10px;
+  top: 0;
+  padding-inline: 3px;
+  transform: translateY(-40%);
+}
+body main > section:last-child form div input {
+  border-color: rgba(0, 0, 0, 0.1882352941);
+  width: 100%;
+  padding-inline: 4px;
+  border-radius: 10px;
+  font-size: 0.6rem;
+  height: 30px;
+}
+body main > section:last-child form div input[type=submit] {
+  width: 100%;
+  color: #fff;
+  border: none;
+  font-size: 0.7rem;
+  padding: 4px 10px;
+  cursor: pointer;
+  background-color: #0050b2;
+}
+body main > section:last-child p {
+  font-size: 0.6rem;
+}
+body main > section:last-child p span {
+  font-weight: 800;
+}
+body main > section:last-child button {
+  display: flex;
+  justify-content: center;
+  font-size: 0.6rem;
+  align-items: center;
+  border: 1px solid rgba(0, 0, 0, 0.1882352941);
+  background-color: #fff;
+  border-radius: 10px;
+  cursor: pointer;
+  padding: 5px 10px;
+  box-sizing: content-box;
+}
+body main > section:last-child button img {
+  width: 1rem;
+  margin-right: 5px;
+  border-radius: 50%;
+}
+@media screen and (max-width: 600px) {
+  body main {
+    flex-direction: column-reverse;
+  }
+  body main > section {
+    padding-block: 20px;
+    width: 100%;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+}
+body img {
+  max-width: 100%;
+}/*# sourceMappingURL=login.css.map */

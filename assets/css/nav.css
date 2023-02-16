@@ -1,0 +1,78 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;0,700;1,500;1,900&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-transform: capitalize;
+  font-family: "Poppins", sans-serif;
+}
+
+:focus {
+  outline: none;
+}
+
+nav {
+  width: 100%;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  height: 50px;
+  align-items: center;
+  padding: 10px 5%;
+}
+nav > * {
+  height: 100%;
+}
+nav div {
+  display: flex;
+}
+nav div:first-child {
+  justify-content: space-between;
+  align-items: center;
+}
+nav div:first-child img {
+  height: 100%;
+}
+nav div:first-child p {
+  font-size: 1rem;
+}
+nav div:first-child p span {
+  font-size: 1.2rem;
+  font-weight: 800;
+  text-transform: none;
+  color: #0050b2;
+}
+nav div:last-child a {
+  width: 50px;
+  align-items: center;
+  text-decoration: none;
+  display: flex;
+  max-height: 100%;
+  justify-content: space-between;
+  flex-direction: column;
+}
+nav div:last-child a img {
+  height: -webkit-fill-available;
+  height: -moz-available;
+  height: fill-available;
+}
+nav div:last-child a p {
+  font-size: 0.4rem;
+}
+nav ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 60%;
+}
+nav ul li {
+  font-size: 0.7rem;
+}
+nav ul li a {
+  color: black;
+  text-decoration: none;
+}
+nav ul li.active > a {
+  color: #0050b2;
+}/*# sourceMappingURL=nav.css.map */

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/fontawsome/all.min.css" />
+  </head>
+  <body>
+    <main>
+      <section>
+        <img src="./assets/images/Screenshot 2023-02-11 152100.png" alt="" />
+        <h2>
+          change the quality <br />
+          of the life
+        </h2>
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem velit
+        </p>
+        <p>Lorem ipsum dolor sit amet consectetur.</p>
+        <p>Lorem ipsum dolor sit amet consectetur.</p>
+        <p>Lorem ipsum dolor sit amet consectetur.</p>
+      </section>
+      <section>
+        <div>
+          <img src="./assets/images/Screenshot 2023-02-11 153509.png" alt="" />
+          <p>commenter<span>.ai</span></p>
+        </div>
+        <h2>hello again</h2>
+        <p>Lorem ipsum dolor sit amet. Lorem, ipsum.</p>
+        <div><span class="active"></span><span></span></div>
+        <form class="active" action="./home.html">
+          <div>
+            <label>Email Adress</label>
+            <input type="text" />
+          </div>
+          <div>
+            <label>Password</label>
+            <input type="password" />
+          </div>
+          <div><input type="submit" value="login" /></div>
+          <button>
+            <img src="./assets/images/download.png" alt="" /> Sign in with
+            google
+          </button>
+        </form>
+        <form action="">
+          <div>
+            <label>Email Adress</label>
+            <input type="text" />
+          </div>
+          <div>
+            <label>Password</label>
+            <input type="password" />
+          </div>
+          <div><input type="submit" value="sign up" /></div>
+        </form>
+        <form>
+          <div>
+            <div>
+              <label>First name</label>
+              <input type="text" placeholder="MR" />
+            </div>
+            <div>
+              <label>Last Name</label>
+              <input type="text" placeholder="Marco" />
+            </div>
+          </div>
+          <div><label>Adress</label> <input type="text" /></div>
+          <div>
+            <div><label>city</label> <input type="text" /></div>
+            <div><label>postal code</label> <input type="number" /></div>
+          </div>
+          <div>
+            <label>Card Number</label> <input type="text" />
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim,
+              debitis!
+            </p>
+          </div>
+
+          <div><input type="submit" value="Start My Free Trail" /></div>
+        </form>
+        <p>Don't have an account yet ? <a href="ToSignUp'">Sign Up</a></p>
+      </section>
+    </main>
+    <script>
+      //===============
+      function ValidateCreditCardNumber() {}
+
+      document.forms[2].onsubmit = function (e) {
+        e.preventDefault();
+        let form = this;
+        let Fname = form.children[0].children[0].children[1].value;
+        let Lname = form.children[0].children[1].children[1].value;
+        let Adress = form.children[1].children[1].value;
+        let City = form.children[2].children[0].children[1].value;
+        let postalCode = form.children[2].children[1].children[1].value;
+        let Card = form.children[3].children[1].value.split(" ").join("");
+        let visaRegEx = /^(?:4[0-9]{12}(?:[0-9]{3})?)$/;
+        let mastercardRegEx = /^(?:5[1-5][0-9]{14})$/;
+        let amexpRegEx = /^(?:3[47][0-9]{13})$/;
+        let discovRegEx = /^(?:6(?:011|5[0-9][0-9])[0-9]{12})$/;
+        let isValid = false;
+
+        if (visaRegEx.test(Card)) {
+          isValid = true;
+        } else if (mastercardRegEx.test(Card)) {
+          isValid = true;
+        } else if (amexpRegEx.test(Card)) {
+          isValid = true;
+        } else if (discovRegEx.test(Card)) {
+          isValid = true;
+        }
+        if (Fname) {
+          if (Lname) {
+            if (Adress) {
+              if (City) {
+                if (postalCode) {
+                  if (isValid) {
+                    giveAlert("THNAKS");
+                  } else {
+                    giveAlert("please a valid card number");
+                  }
+                } else {
+                  giveAlert("please enter your postal Code");
+                }
+              } else {
+                giveAlert("please enter your City");
+              }
+            } else {
+              giveAlert("please enter your Adress");
+            }
+          } else {
+            giveAlert("please enter your last name");
+          }
+        } else {
+          giveAlert("please enter your first name");
+        }
+      };
+    </script>
+    <script src="./assets/Js/preferd.js"></script>
+    <script deter src="./assets/fontawsome/all.min.js"></script>
+    <script src="./assets/Js/main.js"></script>
+  </body>
+</html>
